@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-</head>
-<body>
-    <script src = "./jquery.js"></script>
+  </head>
+  <body>
+    <p id="red">hello</p>
+    <script src="./jquery.js"></script>
     <script>
-    window.onload = function(){
-
-        function cb (data){
-            console.log(data);
-        }
-        $.get("data.json", cb);
-    console.log("test");
-
-    }
-
+      $(() => {
+        console.log("data");
+        $.get("data.json", (data) => {
+          console.log(data);
+        });
+        console.log("test");
+      });
     </script>
- 
-</body>
+  </body>
 </html>
